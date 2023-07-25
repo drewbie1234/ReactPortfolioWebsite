@@ -11,3 +11,334 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*TAG STYLES*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 375px;
+  font-family: 'Fira Code', monospace;
+}
+/*NAV BAR STYLES*/
+
+.navbar {
+  position: relative;
+  color: white;
+  width: 100%;
+  min-width: 375px;
+}
+
+.navbar-intermediate{
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+}
+
+.nav-logo-wrapper {
+  display: flex;
+  padding: 20px;
+}
+
+.nav-logo-wrapper h1 {
+  margin: auto 15px;
+  font-size: 15PX;
+}
+
+.nav-logo-img {
+  width: 35px;
+}
+
+.nav-links-wrapper {
+  display: none;
+  text-transform: uppercase;
+  margin: auto;
+  margin-right: 40px;
+}
+
+.nav-links-wrapper a {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+
+.nav-links-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-links-wrapper li {
+  display: inline;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+#myLinks {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+#myLinks a:link,
+a:active,
+a:visited {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+#myLinks a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#myLinks li {
+  text-align: center;
+  padding: 15px;
+  border-style: solid;
+  border-color: white;
+}
+
+.hamburger-button-wrapper {
+  margin: auto 50px;
+}
+
+.icon {
+  display: block;
+  color: white;
+  font-size: 15px;
+}
+
+.container{
+  background: radial-gradient(circle, #3d3a3a, #1c1c1d);
+}
+
+.container2{
+  padding-top: 50px;
+  min-height: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly ;
+}
+
+.container3{
+  min-height: 50vh;
+  max-height: 50vh;
+  display: flex;
+  background: radial-gradient(circle, #3d3a3a, #1c1c1d);
+}
+
+:root {
+  --header-height: 72.5px;
+}
+
+.hero-section {
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  margin: auto ;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: minmax(0, 1fr); /* Allow the first div to shrink vertically */
+  gap: 10px; /* Optional gap between the divs */
+  
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background-image: url("/public/images/studio.jpg");
+  background-size: cover;
+  padding: 20px;
+}
+
+.wrapper2 {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  flex: 0 0 auto;
+
+}
+.wrapper2 h1 {
+  font-size: 40px;
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+.wrapper2 p {
+  color: rgb(165, 165, 165);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+#cta-button {
+  /* Define the button's appearance */
+  background-color: #3665f4;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+}
+
+#cta-button:hover {
+  /* Define the button's hover effect */
+  background-color: #363ff4;
+}
+
+.hero-section-image {
+  max-width: 100%;
+  
+}
+
+.language-logos-section{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+.language-logos-section h2{
+  padding: 0 20px;  
+}
+
+.logo-wrapper{
+  padding: 5rem 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 4rem;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.find-out-wrapper{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: 3em;
+  height: 100%;
+}
+
+.find-out-wrapper .h2{
+  color: white;
+}
+
+.find-out-info {
+  max-width: 384px;
+  color: white;
+  padding: 40px;
+  font-size: 10px;
+  height: 100%;
+}
+
+#click-to-find-out{
+  padding-bottom: 40px;
+  color: #3665F4
+}
+
+#root{
+  height: 100vh;
+}
+.container4{
+  height: 50vh;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  
+  .nav-links-wrapper {
+    display: unset;
+  }
+  #myLinks {
+    display: none;
+  }
+
+  .hamburger-button-wrapper {
+    display: none;
+  }
+  
+  .wrapper{
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  .wrapper2{
+    width: 50%;
+    padding: 10;
+  }
+
+  .wrapper2 h1 {
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: 1;
+    word-spacing: -10;
+  }
+  .wrapper2 p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1;
+  }
+
+  #cta-button{
+    margin:35 0;
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+
+  .find-out-info {
+    width: 75%;
+    font-size: 20px;
+  }
+
+ 
+
+}
+
+@media only screen and (min-width: 1000px) {
+  section {
+    max-width: 1400px;
+  }
+
+  .wrapper2 h1 {
+    font-size: 3rem;
+    line-height: 1.6;
+  }
+  .wrapper2 p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .logo {
+    width: 7rem;
+    transition: transform 0.3s;
+  }
+  .find-out-info {
+    max-width: 75%;
+    font-size: 20px;
+  }
+}
+
