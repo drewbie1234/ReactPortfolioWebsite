@@ -1,0 +1,3 @@
+.section-container-black{
+    background: radial-gradient(circle,  var(--colorPalette3),  var(--colorPalette2));
+  }

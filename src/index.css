@@ -1,15 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --nav-height: 75px;
+  --colorPalette1: #61dafb;
+  --colorPalette2: #20232a;
+  --colorPalette3: #3d4754;
+  --colorPalette4: #ffffff;
+  --colorPalette5: #79b6f2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  scroll-behavior: smooth;
 }
 
 /*TAG STYLES*/
@@ -21,150 +20,219 @@ code {
 body {
   min-width: 375px;
   font-family: 'Fira Code', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
+
 /*NAV BAR STYLES*/
 
-.navbar {
-  position: relative;
-  color: white;
-  width: 100%;
-  min-width: 375px;
-}
-
-.navbar-intermediate{
+.navbar{
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  background-color: #111;
+  background-color: var(--colorPalette2);
+  box-sizing: border-box;
 }
 
-.nav-logo-wrapper {
-  display: flex;
+.navbar-logo-container {
   padding: 20px;
+  display: flex;
 }
 
-.nav-logo-wrapper h1 {
+.navbar-logo-container h1 {
   margin: auto 15px;
   font-size: 15PX;
+  color: var(--colorPalette4);
 }
 
-.nav-logo-img {
+.navbar-logo-img {
   width: 35px;
 }
 
-.nav-links-wrapper {
-  display: none;
-  text-transform: uppercase;
+.navbar-links-container {
   margin: auto;
   margin-right: 40px;
+  display: none;
+  text-transform: uppercase;
+  color:  var(--colorPalette4);
 }
 
-.nav-links-wrapper a {
+.navbar-links-container a {
   text-decoration: none;
-  color: white;
+  color:  var(--colorPalette4);
   margin: 20px;
 }
 
-.nav-links-wrapper ul {
+.navbar-links-container ul {
   list-style-type: none;
   margin: 0;
 }
 
-.nav-links-wrapper li {
+.navbar-links-container li {
   display: inline;
   text-transform: uppercase;
   padding: 10px;
 }
 
 #myLinks {
-  display: none;
   position: absolute;
   width: 100%;
+  background-color:  var(--colorPalette2);
+
 }
 
-#myLinks a:link,
-a:active,
-a:visited {
-  color: white;
+#myLinks.slide-in {
+  display: block;
+  animation: slideInAnimation 0.5s forwards; /* Apply the slide-in animation when "slide-in" class is added */
+}
+
+#myLinks.slide-out {
+  display: none;
+  animation: slideOutAnimation 0.5s forwards; /* Apply the slide-out animation when "slide-out" class is added */
+  
+}
+
+#myLinks a:link, a:active, a:visited {
+  color:  var(--colorPalette4);
   text-decoration: none;
   text-transform: uppercase;
   margin-top: 0px;
 }
 
 #myLinks a:hover {
-  color: white;
+  color:  var(--colorPalette4);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 #myLinks li {
   text-align: center;
   padding: 15px;
   border-style: solid;
-  border-color: white;
+  border-color:  var(--colorPalette4);
 }
 
-.hamburger-button-wrapper {
+#myLinks li:hover{
+  background-color:  var(--colorPalette1);
+}
+
+@keyframes slideInAnimation {
+  from {
+    right: -4000px; /* Start position for slide-in animation */
+    opacity: 0%;
+  }
+  to {
+    top: 70px;
+    right: 0;
+    opacity: 100% /* End position for slide-in animation */
+  }
+}
+
+@keyframes slideOutAnimation {
+  from {
+    top: 70px;
+    opacity: 100% /* Start position for slide-out animation */
+  }
+  to {
+    right: -400px;
+    opacity: 0% /* End position for slide-out animation */
+  }
+}
+
+
+.hamburger-button-container {
   margin: auto 50px;
 }
 
-.icon {
+#icon {
   display: block;
   color: white;
   font-size: 15px;
 }
 
-.container{
-  background: radial-gradient(circle, #3d3a3a, #1c1c1d);
+.section-container-white{
+  background: white;
 }
 
-.container2{
-  padding-top: 50px;
-  min-height: 100%;
-  max-height: 100%;
+
+.section-container-black{
+  background: radial-gradient(circle,  var(--colorPalette3),  var(--colorPalette2));
+}
+
+.tools-section{
+  min-height: 50vh;
+  max-height: 50vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly ;
+  justify-content: space-around;
 }
 
-.container3{
+.container2b{
+
   min-height: 50vh;
   max-height: 50vh;
+  box-sizing: border-box;
   display: flex;
-  background: radial-gradient(circle, #3d3a3a, #1c1c1d);
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-:root {
-  --header-height: 72.5px;
+.container2c{
+
+  min-height: 50vh;
+  max-height: 50vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: radial-gradient(circle,  var(--colorPalette3),  var(--colorPalette2));
+  color: #ffffff;
 }
+
+.svg-section{
+  min-height: 50vh;
+  max-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  background: radial-gradient(circle,  var(--colorPalette3),  var(--colorPalette2));
+}
+
+
+
 
 .hero-section {
   width: 100%;
-  height: calc(100vh - var(--header-height));
-  margin: auto ;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  height: calc(100vh - var(--nav-height));
+  margin: 0;
+  color: var(--colorPalette4);
   box-sizing: border-box;
-
   display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-template-rows: minmax(0, 1fr); /* Allow the first div to shrink vertically */
-  gap: 10px; /* Optional gap between the divs */
-  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  gap: 10px;
+
 }
 
 .wrapper {
   box-sizing: border-box;
   background-image: url("/public/images/studio.jpg");
   background-size: cover;
-  padding: 20px;
+ 
+  height: auto;
+  margin: 20px;
+  overflow: hidden;
+  
 }
 
 .wrapper2 {
   box-sizing: border-box;
   padding: 0px 20px;
   flex: 0 0 auto;
+  text-align: left;
 
 }
 .wrapper2 h1 {
@@ -173,7 +241,7 @@ a:visited {
   line-height: 1.2;
 }
 .wrapper2 p {
-  color: rgb(165, 165, 165);
+  color: var(--colorPalette4);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -181,9 +249,22 @@ a:visited {
 
 #cta-button {
   /* Define the button's appearance */
-  background-color: #3665f4;
-  color: #ffffff;
+  background-color: var(--colorPalette1);
+  color: var(--colorPalette4);
   margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Fira Code', monospace;
+}
+
+#cta-button2 {
+  /* Define the button's appearance */
+  
+  background-color: var(--colorPalette1);
+  color: var(--colorPalette4);
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -194,7 +275,7 @@ a:visited {
 
 #cta-button:hover {
   /* Define the button's hover effect */
-  background-color: #363ff4;
+  background-color: var(--colorPalette5)
 }
 
 .hero-section-image {
@@ -204,10 +285,10 @@ a:visited {
 
 .language-logos-section{
   width: 100%;
-  height: 100vh;
+  margin: 0;
   box-sizing: border-box;
   text-align: center;
-  
+   
 }
 
 .language-logos-section h2{
@@ -215,7 +296,6 @@ a:visited {
 }
 
 .logo-wrapper{
-  padding: 5rem 0;
   background-color: white;
   display: flex;
   justify-content: space-evenly;
@@ -225,67 +305,220 @@ a:visited {
 .logo {
   width: 4rem;
   transition: transform 0.3s;
+  cursor: grab;
+  
 }
 
 .logo:hover {
   transform: scale(1.2);
 }
 
-.find-out-wrapper{
-  display: flex;
-  justify-content: center;
+.logo:active {
+  transform: scale(0.8);
+}
+
+#find-out-wrapper{
+  padding: 20px 20px 20px 20px;
+  font-size: 50px;
+  height: 100%;
+  box-shadow:100px 100px 100px white ;
+}
+.progress-container{
+  background-color: var(--colorPalette3);
   margin: auto;
-  font-size: 3em;
-  height: 100%;
+  width: 60%;
 }
-
-.find-out-wrapper .h2{
-  color: white;
-}
-
-.find-out-info {
-  max-width: 384px;
-  color: white;
+#find-out-info {
+  color: var(--colorPalette4);
   padding: 40px;
-  font-size: 10px;
+  font-size: 14px;
   height: 100%;
+  display: none;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+#info{
+  width: 100%;
+  font-size: large;
 }
 
 #click-to-find-out{
   padding-bottom: 40px;
-  color: #3665F4
+  color: var(--colorPalette1);
+  font-size: x-large;
 }
 
-#root{
-  height: 100vh;
+#find-out-title{
+  font-size:x-large;
+  color: var(--colorPalette4);
 }
-.container4{
-  height: 50vh;
+
+
+
+#svg-logo1 {
+  max-width: 75vw;
+  max-width: 50vw;
+  
 }
+
+
+
+#svg-logo2 {
+  width:100%;
+  height:auto;
+  max-width: 25vh;
+  padding: 0px;
+}
+
+#svg-logo3 {
+  max-width: 25vh;
+}
+
+#svg-logo2:hover{
+  cursor: grab;
+}
+
+#svg-logo1 path:nth-child(1){
+  stroke-dashoffset:314.71588134765625;
+  stroke-dasharray:314.71588134765625;
+  animation: line-anim 1s ease forwards ;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(2){
+  stroke-dashoffset:383.78582763671875;
+  stroke-dasharray:383.78582763671875;
+  animation: line-anim 1s ease forwards 0.1s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(3){
+  stroke-dashoffset:286.6756286621094;
+  stroke-dasharray:286.6756286621094;
+  animation: line-anim 1s ease forwards 0.2s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(4){
+  stroke-dashoffset:411.4433288574219;
+  stroke-dasharray:411.4433288574219;
+  animation: line-anim 1s ease forwards 0.3s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(5){
+  stroke-dashoffset:665.70068359375;
+  stroke-dasharray:665.70068359375;
+  animation: line-anim 1s ease forwards 0.4s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(6){
+  stroke-dashoffset:343.6822814941406;
+  stroke-dasharray:343.6822814941406;
+  animation: line-anim 1s ease forwards 0.5s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(7){
+  stroke-dashoffset:333.55401611328125;
+  stroke-dasharray:333.55401611328125;
+  animation: line-anim 1s ease forwards 0.6s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(8){
+  stroke-dashoffset:430.6490783691406;
+  stroke-dasharray:430.6490783691406;
+  animation: line-anim 1s ease forwards 0.7s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(9){
+  stroke-dashoffset:151.55203247070312;
+  stroke-dasharray:151.55203247070312;
+  animation: line-anim 1s ease forwards 0.8s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(10){
+  stroke-dashoffset:417.7154235839844;
+  stroke-dasharray:417.7154235839844;
+  animation: line-anim 1s ease forwards 0.9s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(11){
+  stroke-dashoffset:314.71588134765625;
+  stroke-dasharray:314.71588134765625;
+  animation: line-anim 1s ease forwards 1s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(12){
+  stroke-dashoffset:355.3514404296875;
+  stroke-dasharray:355.3514404296875;
+  animation: line-anim 1s ease forwards 1.1s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(13){
+  stroke-dashoffset:435.9807434082031;
+  stroke-dasharray:435.9807434082031;
+  animation: line-anim 1s ease forwards 1.2s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(14){
+  stroke-dashoffset:338.00872802734375;
+  stroke-dasharray:338.00872802734375;
+  animation: line-anim 1s ease forwards 1.3s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(15){
+  stroke-dashoffset:343.68243408203125;
+  stroke-dasharray:343.68243408203125;
+  animation: line-anim 1s ease forwards 1.4s;
+  animation-play-state: inherit;
+}
+#svg-logo1 path:nth-child(16){
+  stroke-dashoffset:345.7844543457031;
+  stroke-dasharray:345.78445434570312;
+  animation: line-anim 1s ease forwards 1.5s;
+  animation-play-state: inherit;
+}
+
+@keyframes line-anim{
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill{
+  to {
+    fill: white;
+  }
+}
+
+.container7{
+  width: 300px;
+  height:300px;
+}
+
+.react-img{
+  width: 75vw;
+}
+
 
 
 
 @media only screen and (min-width: 768px) {
   
-  .nav-links-wrapper {
-    display: unset;
-  }
   #myLinks {
     display: none;
   }
 
-  .hamburger-button-wrapper {
+  .hamburger-button-container {
     display: none;
+  }
+  .navbar-links-container {
+    display: unset;
   }
   
   .wrapper{
     box-sizing: border-box;
-    width: 50%;
   }
 
   .wrapper2{
-    width: 50%;
-    padding: 10;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .wrapper2 h1 {
@@ -309,19 +542,12 @@ a:visited {
     width: 6rem;
   }
 
-  .find-out-info {
-    width: 75%;
-    font-size: 20px;
-  }
 
- 
 
 }
 
 @media only screen and (min-width: 1000px) {
-  section {
-    max-width: 1400px;
-  }
+
 
   .wrapper2 h1 {
     font-size: 3rem;
@@ -336,9 +562,34 @@ a:visited {
     width: 7rem;
     transition: transform 0.3s;
   }
-  .find-out-info {
-    max-width: 75%;
-    font-size: 20px;
+}
+
+#info {
+  /* Your existing CSS properties for the hero section */
+}
+
+#info {
+  font-size: 16px; /* Set a base font size */
+}
+
+/* Responsive font size using vw unit */
+@media screen and (max-width: 768px) {
+  /* Adjust the font size for smaller screens */
+  #info {
+    font-size: 3vw; /* The font size will be 4% of the viewport width */
   }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /* Adjust the font size for medium-sized screens */
+  #info {
+    font-size: 2vw; /* The font size will be 3% of the viewport width */
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  /* Adjust the font size for larger screens */
+  #info {
+    font-size: 1.5vw; /* The font size will be 2% of the viewport width */
+  }
+}
