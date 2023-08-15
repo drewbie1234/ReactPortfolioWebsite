@@ -1,17 +1,19 @@
-import './App.css';
-import FindOut from './FindOut';
-import  DoReact from './DoReact';
-import  Hero from './Hero';
-import NavBar from './NavBar';
+import NavBar from './HomePage/NavBar';
+import  HomePage from './HomePage/HomePage';
+import React from 'react';
+// import LetsBeginPage from './LetsBeginPage';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import PortfolioPage from './PortfolioPage/PortfolioPage';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <Hero />
-      <FindOut />
-      <DoReact />
-    </div>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/portfolio" element={<PortfolioPage />} />
+      </Routes>
+    </>
   );
 }
 

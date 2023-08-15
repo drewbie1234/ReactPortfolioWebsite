@@ -1,5 +1,6 @@
 import React, { useState } from "react";
- 
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +22,8 @@ const NavBar = () => {
             <h1>techWork_Studios</h1>
           </div>
           <div className='navbar-links-container'>
-            <a href="about.html" onClick={closeMenu}>about</a>
-            <a href="portfolio.html" onClick={closeMenu}>portfolio</a>
+            <Link to="/">Home</Link>
+            <Link to="/portfolio">Portfolio</Link>
             <a href="work_it_out.html" onClick={closeMenu}>lets begin</a>
           </div>
           <div className="hamburger-button-container">

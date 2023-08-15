@@ -4,7 +4,12 @@
   --colorPalette2: #20232a;
   --colorPalette3: #3d4754;
   --colorPalette4: #ffffff;
+
   --colorPalette5: #79b6f2;
+  --colorPalette6: #fc929e;
+  --colorPalette7: #8dc891;
+  --colorPalette8: #fac863;
+
 }
 
 html{
@@ -213,6 +218,18 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: minmax(0, 1fr);
+  gap: 10px;
+
+}
+
+.hero-section2 {
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  margin: 0;
+  color: var(--colorPalette4);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 
 }
@@ -564,9 +581,6 @@ body {
   }
 }
 
-#info {
-  /* Your existing CSS properties for the hero section */
-}
 
 #info {
   font-size: 16px; /* Set a base font size */

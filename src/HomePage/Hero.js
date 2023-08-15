@@ -1,7 +1,7 @@
 import React, {  useState, useRef, useEffect  } from "react";
 import styles from './Hero.module.css'; 
 
-const Home = () => {
+const Hero = () => {
     return (
     <div>
         <div className="section-container-black">
@@ -33,7 +33,7 @@ const Home = () => {
                             M57.5,-54.3C68.6,-46.5,67.6,-23.2,60.6,-7C53.6,9.2,40.6,18.4,29.5,33.6C18.4,48.8,9.2,70,-5.1,75.1C-19.4,80.2,-38.9,69.2,-52.8,54.1C-66.6,38.9,-75,19.4,-72.6,2.4C-70.2,-14.7,-57.1,-29.3,-43.2,-37.1C-29.3,-44.9,-14.7,-45.9,4.3,-50.2C23.2,-54.5,46.5,-62.1,57.5,-54.3Z">    
                         </animate>
 
-
+                    
                     </path>
                     </svg>
                 </div>
@@ -50,4 +50,4 @@ const Home = () => {
     </div>
     )
 }
-export default Home;
+export default Hero;
