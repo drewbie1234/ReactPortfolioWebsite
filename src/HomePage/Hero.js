@@ -1,5 +1,6 @@
 import React, {  useState, useRef, useEffect  } from "react";
-import styles from './Hero.module.css'; 
+import styles from './Hero.module.css';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
@@ -41,7 +42,12 @@ const Hero = () => {
                         <h1>FULL STACK WEB & SOFTWARE DEVELOPMENT </h1>
                         <p>Create unforgettable user experiences with our design-driven Websites and Apps.</p>
                         <div class="cta-wrapper">
-                        <button id="cta-button">Start Work Now</button>
+                        <motion.div 
+                            id="cta-button"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 17 }}    
+                        >Start Work Now</motion.div>
                     </div>
                 </div>
             </section>

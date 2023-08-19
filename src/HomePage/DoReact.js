@@ -1,4 +1,5 @@
-import React, {  useState, useRef, useEffect  } from "react";
+import React, {  useState, useEffect  } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 const DoReact = () => {
 
@@ -33,7 +34,7 @@ const DoReact = () => {
         
       }
 
-    }, [rotate])
+    }, [rotation])
   
     const stopDrag = () => {
       setIsDragging(false);
@@ -110,7 +111,8 @@ const DoReact = () => {
                 </div>
                 </div>
             <div>
-                <button id="cta-button2" style={{display: `${displayContinue}`}}>But there is more</button>
+            <Link to="/portfolio" id="cta-button2" style={{display: `${displayContinue}`}}>See More</Link>
+
             </div>
     </div>
     </div>

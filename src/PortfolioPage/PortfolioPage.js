@@ -14,6 +14,7 @@ function PortfolioPage() {
             ProjectImage={project.projectImage}
             ProjectText={project.projectText}
             ProjectLanguages={project.projectLanguages}
+            endpoint={project.endpoint}
             backgroundColor={project.backgroundColor}
         />
     ));

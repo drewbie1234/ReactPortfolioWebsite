@@ -50,3 +50,10 @@
     font-size:x-small;
     text-align: left;
 }
+
+.div4{
+    display: flex;
+    justify-content: center;
+    font-size:x-small;
+    text-align: left;
+}

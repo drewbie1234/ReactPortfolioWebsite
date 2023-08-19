@@ -1,0 +1,20 @@
+
+.selectionSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #fc929e;
+    width: 80vw;
+    margin: 0;
+    border: solid;
+    border-radius: 20px;
+    padding: 25px;
+}
+.banner{
+    border: solid;
+    background-color:#fac863;
+}

@@ -2,7 +2,7 @@
   --nav-height: 75px;
   --colorPalette1: #61dafb;
   --colorPalette2: #20232a;
-  --colorPalette3: #3d4754;
+  --colorPalette3: hsl(214, 16%, 28%);
   --colorPalette4: #ffffff;
 
   --colorPalette5: #79b6f2;
@@ -144,7 +144,6 @@ body {
   }
 }
 
-
 .hamburger-button-container {
   margin: auto 50px;
 }
@@ -207,8 +206,6 @@ body {
 }
 
 
-
-
 .hero-section {
   width: 100%;
   height: calc(100vh - var(--nav-height));
@@ -266,6 +263,7 @@ body {
 
 #cta-button {
   /* Define the button's appearance */
+  width:fit-content;
   background-color: var(--colorPalette1);
   color: var(--colorPalette4);
   margin: 20px 0;

@@ -4,7 +4,8 @@ export const projects = [
         projectImage: "/images/movie.jpg",
         projectText: "Tired of endlessly scrolling through streaming platforms, trying to decide on the perfect movie for your evening? Say goodbye to movie selection dilemmas with MovieMuse, the ultimate app designed to make your movie nights unforgettable.",
         projectLanguages: ['CSS', 'HTML','JS'],
-        backgroundColor: '#fc929e'
+        backgroundColor: '#fc929e',
+        endpoint: '/moviemuse'
     },
     {
         projectName: "Bot Tech",

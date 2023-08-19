@@ -24,7 +24,7 @@ const NavBar = () => {
           <div className='navbar-links-container'>
             <Link to="/">Home</Link>
             <Link to="/portfolio">Portfolio</Link>
-            <a href="work_it_out.html" onClick={closeMenu}>lets begin</a>
+            <Link to="/contact">Contact</Link>
           </div>
           <div className="hamburger-button-container">
             <button onClick={() => setIsElementVisible(!isElementVisible)}>
