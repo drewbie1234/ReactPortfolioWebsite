@@ -116,7 +116,7 @@ function MovieMuse() {
           <select name="genres" id="genres"></select>
         </form>
         <br/>
-        <button id="playBtn" onClick={handleClick}>Let's Play!</button>
+        <button id="playBtn" onClick={handleClick}>Find Now!</button>
         <br/><br/>
         <MovieCard movieInfo={movieInfo} />
       </div>

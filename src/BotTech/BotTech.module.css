@@ -1,0 +1,28 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(20, 30px); /* Adjust cell size as needed */
+    grid-template-rows: repeat(20, 30px);
+    gap: 1px; /* Gap between cells */
+    border: 1px solid #ccc; /* Grid border */
+    background-color: #f0f0f0; /* Grid background color */
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+  .gridRow {
+    display: flex;
+
+  }
+  
+  .cellStyles {
+    width: 30px; /* Cell width */
+    height: 30px; /* Cell height */
+    border: 1px solid black; /* Cell border */
+    background-color: green; /* Cell background color */
+    cursor: pointer;
+  }
+  
+  .gridCell.active {
+    background-color: #3498db; /* Active cell background color */
+  }

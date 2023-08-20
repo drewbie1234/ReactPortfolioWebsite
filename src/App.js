@@ -6,6 +6,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import PortfolioPage from './PortfolioPage/PortfolioPage';
 import MovieMuse from './MovieMuse/MovieMuse';
+import BotTech from './BotTech/BotTech';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/portfolio" element={<PortfolioPage />} />
         <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="/moviemuse" element={<MovieMuse />} />
+        <Route exact path="/bottech" element={<BotTech />} />
       </Routes>
     </>
   );

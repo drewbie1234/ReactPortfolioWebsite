@@ -8,17 +8,19 @@ export const projects = [
         endpoint: '/moviemuse'
     },
     {
-        projectName: "Bot Tech",
+        projectName: "BotTech",
         projectImage: "/images/robot.png",
         projectText: "Step into the shoes of a skilled technician in Bot Tech, a captivating arcade game that will put your problem-solving and multitasking skills to the ultimate test! Your mission: Manage and maintain an entire field of industrious robots in a futuristic factory setting.",
         projectLanguages: ['CSS', 'HTML','JS'],
-        backgroundColor: '#79b6f2'
+        backgroundColor: '#79b6f2',
+        endpoint: '/bottech'
     },
     {
         projectName: "Study Group",
         projectImage: "/images/study.jpg",
         projectText: "An online platform that facilitates virtual study groups for students of all levels. The platform offers a collaborative and interactive space for students to connect, study together, and share knowledge, regardless of their geographical locations.",
         projectLanguages: ['CSS', 'HTML','JS'],
-        backgroundColor: '#fac863' 
+        backgroundColor: '#fac863',
+        endpoint: '/moviemuse'
     }
 ]
