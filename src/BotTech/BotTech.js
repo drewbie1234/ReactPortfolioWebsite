@@ -99,7 +99,7 @@ function BotTech() {
     const updatedCell = MakeCell("bot", botPosition.x, botPosition.y); // Update the cell type as needed
 
     updateCellInGrid(cellIndex, updatedCell);
-  }, [botPosition, position]);
+  }, );
 
 
 

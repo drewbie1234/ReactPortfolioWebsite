@@ -26,7 +26,7 @@ function MakeCell(type, row, col) {
         height: "4vmin",
         backgroundColor: "orange", // Default cell background color
         border: "1px solid purple",
-        borderRadius: "1vmin",
+        borderRadius: "2vmin",
       },
       traverse: false,
     };
@@ -57,7 +57,6 @@ function MakeCell(type, row, col) {
         width: "4vmin", // Adjust cell size if needed
         height: "4vmin",
         backgroundColor: "grey", // Default cell background color
-        border: "1px solid black",
       },
       traverse: true,
     };
