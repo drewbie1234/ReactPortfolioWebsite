@@ -1,0 +1,53 @@
+[33mcommit 2111709e9a229e953c3a19eb306ac9e8696fa927[m[33m ([m[1;36mHEAD -> [m[1;32mbug-fixes-and-development[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: killingley <dkillin@amazon.co.uk>
+Date:   Thu Aug 24 05:30:33 2023 +0100
+
+    further BotTech work
+
+[33mcommit e0d74bcb43ec45bb2c2e3939b7ff6cf653714aa6[m
+Author: killingley <dkillin@amazon.co.uk>
+Date:   Wed Aug 23 06:18:01 2023 +0100
+
+    completely reworked structure of BotTech mechanics so that each cell in the grid array is now an object with various properties which are responsible for style in renderings as well as game mechanics. Functionality to add random blocks that are adjustible in size and gap has now been included as well as introduction of traverse boolean that prevents players or bots from moving into a cell with a travere property value equal to true.
+
+[33mcommit 13c908e1faa46b9f5dac3ee2668f2a938673f59c[m
+Author: killingley <dkillin@amazon.co.uk>
+Date:   Tue Aug 22 00:04:52 2023 +0100
+
+    added player move, bot move and several event listners to BotTech. This is also restore point before attempting to break BotTech into smaller components and utility functions. Components and utility functions have been created but main BotTech js file has not been changed - app still functional
+
+[33mcommit c849105ea4d2229df831b6f9f8e4a5d0b74591e7[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Mon Aug 21 00:58:42 2023 +0100
+
+    more wrok carried out on BotTech game, initial stages of development
+
+[33mcommit ce3b683e2c126911fe603704e0713cc9a27cec1d[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Sun Aug 20 00:43:34 2023 +0100
+
+    signiifcant update to site with portfolio and contact form completed as well as initial functionality of MoviMuse app
+
+[33mcommit 42aaee609d9df224f14133183822560fe91dec12[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Tue Aug 15 03:20:01 2023 +0100
+
+    progress made on portfolio page and also started using framer-motion
+
+[33mcommit bf980e785d1a37361d949a4e543e0c9bff4c50e2[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Mon Aug 14 01:52:08 2023 +0100
+
+    Added additional react components to home page providing further interactvitiy. Converted navbar and hero section to react components. Added SVG animation to hero section image
+
+[33mcommit 7993d502256e3c0cac094110be5388c2ddd26604[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Tue Jul 25 05:50:14 2023 +0100
+
+    myapp
+
+[33mcommit 69377e81976ecaf99b42ad81f8e86f06af079207[m
+Author: drewbie1234 <135838998+drewbie1234@users.noreply.github.com>
+Date:   Fri Jul 21 18:28:02 2023 +0100
+
+    Initialize project using Create React App
