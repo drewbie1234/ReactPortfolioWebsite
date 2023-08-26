@@ -2,7 +2,7 @@ import * as React from 'react';
 import Select from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 
-export default function SelectGrid({ selectedPattern, onSelectionChange }) {
+export default function SelectRow({ selectedPattern, onSelectionChange }) {
   const handleChange = (event, value) => {
     const newValue = value;
     onSelectionChange(newValue); // Call the callback with the selected value
@@ -25,4 +25,3 @@ export default function SelectGrid({ selectedPattern, onSelectionChange }) {
     </>
   );
 }
-
