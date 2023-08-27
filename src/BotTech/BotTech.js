@@ -1,23 +1,30 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import MakeCell from "./MakeCell"; // Import the MakeCell component
+
 import "@fontsource/inter";
+
+import MakeCell from "./MakeCell"; // Import the MakeCell component
+ 
 import SelectGridStyle from "./BotTechGridPatterns";
 import SelectGrid from "./BotTechSelect";
-import Button from "@mui/joy/Button";
-import Select from '@mui/joy/Select';
-import Option from '@mui/joy/Option';
+import GridSizeSelect from './GridSizeSelect'
+
 
 function BotTech() {
-  // State variables to manage player and bot positions, grid cells, etc.
+  // State variables to manage player and bot positions, grid cells, etc.  
+  const [ numRows, setNumRows ] = useState(20); // Number of rows in the grid
+  const [ numCols, setNumCols ] = useState(20); // Number of columns in the grid
+  const [ cellSize, setCellSize ] = useState(2)
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const start = MakeCell("path", 0, 0); // Create a start cell using MakeCell component
+  const start = MakeCell("path", 0, 0, cellSize); // Create a start cell using MakeCell component
   const [positionMemory, setPositionMemory] = useState(start);
-  const [botPosition, setBotPosition] = useState({ x: 5, y: 5 });
+  const [botPosition, setBotPosition] = useState({ x: 19, y: 19 });
   const [botPositionMemory, setBotPositionMemory] = useState(start);
   const [selectedPattern, setSelectedPattern] = useState("randomDots");
-  const numRows = 30; // Number of rows in the grid
-  const numCols = 30; // Number of columns in the grid
+  const [selectedSize, setSelectedSize] = useState('small')
+
+
+
 
   // Styling for the grid and its container
   const gridStyles = {
@@ -72,9 +79,33 @@ function BotTech() {
   // State to store the grid cells
   const [grid, setGrid] = useState([]);
 
+
+
   useEffect(() => {
-    const numRows = 30;
-    const numCols = 30;
+
+  
+
+    switch (selectedSize) {
+      case 'small':
+        setNumRows(10)
+        setNumCols(10)
+        break;
+      case 'medium':
+        setNumRows(20)
+        setNumCols(20)
+        break;
+      case 'large':
+        setNumRows(30)
+        setNumCols(30)
+        break;
+      default:
+        break;
+    }
+
+    console.log(`rows ${numRows}`)
+    console.log(`cols ${numCols}`)
+    console.log(`size ${cellSize}`)
+    
 
     // Function creates at 2 array of grid, with each element containing string 'path' or 'wall' matching the specified grid pattern algorhythm
     const maze = SelectGridStyle(numRows, numCols, selectedPattern);
@@ -84,13 +115,13 @@ function BotTech() {
     // Converts 2d array of strings into 1d array of elements containing relevent grid cell object
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
-        mazeCells.push(MakeCell(maze[row][col], row, col));
+        mazeCells.push(MakeCell(maze[row][col], row, col, cellSize));
       }
     }
 
     // Call passes grid object array into setter for grid state variable
     setGrid(mazeCells);
-  }, [selectedPattern]);
+  }, [selectedPattern, selectedSize, numRows, numCols]);
 
   // Function to update a cell in the grid
   const updateCellInGrid = (cellIndex, newCell) => {
@@ -112,12 +143,12 @@ function BotTech() {
     );
 
     if (grid[cellIndex1] !== { x: `${position.x}`, y: `${position.y}` }) {
-      const updatedCell1 = MakeCell("player", position.x, position.y);
+      const updatedCell1 = MakeCell("player", position.x, position.y, cellSize);
       updateCellInGrid(cellIndex1, updatedCell1);
     }
 
     if (grid[cellIndex2] !== { x: `${botPosition.x}`, y: `${botPosition.y}` }) {
-      const updatedCell2 = MakeCell("bot", botPosition.x, botPosition.y);
+      const updatedCell2 = MakeCell("bot", botPosition.x, botPosition.y, cellSize);
       updateCellInGrid(cellIndex2, updatedCell2);
     }
 
@@ -266,7 +297,7 @@ function BotTech() {
     const cellIndex = grid.findIndex((box) => box.key === cell.key);
 
     if (cellIndex !== -1) {
-      const updatedCell = MakeCell("path", cell.y, cell.x);
+      const updatedCell = MakeCell("path", cell.y, cell.x, cellSize);
       updateCellInGrid(cellIndex, updatedCell);
     }
   };
@@ -309,6 +340,11 @@ function BotTech() {
               <SelectGrid
                 selectedPattern={selectedPattern}
                 onSelectionChange={setSelectedPattern}
+              />
+              <GridSizeSelect 
+                style={{width: '10vmin'}}
+                selectedSize={selectedSize}
+                onSelectionChanged={setSelectedSize}
               />
             </div>
           </div>

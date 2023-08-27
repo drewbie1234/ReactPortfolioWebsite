@@ -1,4 +1,4 @@
-function MakeCell(type, row, col) {
+function MakeCell(type, row, col, cellSize) {
     switch (type) {
       case "player":
         return {
@@ -7,8 +7,8 @@ function MakeCell(type, row, col) {
           y: row,
           type: type,
           style: {
-            width: "2vmin",
-            height: "2vmin",
+            width: `${cellSize}vmin`,
+            height: `${cellSize}vmin`,
             background: "linear-gradient(45deg, #00f, #009)",
             border: "1px solid #00f",
             borderRadius: "1vmin",
@@ -24,8 +24,8 @@ function MakeCell(type, row, col) {
           y: row,
           type: type,
           style: {
-            width: "2vmin",
-            height: "2vmin",
+            width: `${cellSize}vmin`,
+            height: `${cellSize}vmin`,
             background: "radial-gradient(#f00, #900)",
             border: "1px solid #f00",
             borderRadius: "2vmin",
@@ -41,8 +41,8 @@ function MakeCell(type, row, col) {
           y: row,
           type: type,
           style: {
-            width: "2vmin",
-            height: "2vmin",
+            width: `${cellSize}vmin`,
+            height: `${cellSize}vmin`,
             background: "linear-gradient(45deg, #bbb, #ddd)",
             border: "1px solid #aaa",
             boxShadow: "2px 2px 4px #333",
@@ -57,8 +57,8 @@ function MakeCell(type, row, col) {
           y: row,
           type: type,
           style: {
-            width: "2vmin",
-            height: "2vmin",
+            width: `${cellSize}vmin`,
+            height: `${cellSize}vmin`,
             background: "linear-gradient(45deg, #111, #002)",
           },
           traverse: true,
@@ -71,8 +71,8 @@ function MakeCell(type, row, col) {
           y: row,
           type: type,
           style: {
-            width: "2vmin",
-            height: "2vmin",
+            width: `${cellSize}vmin`,
+            height: `${cellSize}vmin`,
           },
         };
     }

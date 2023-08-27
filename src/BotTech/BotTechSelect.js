@@ -2,11 +2,10 @@ import * as React from 'react';
 import Select from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 
+
 export default function SelectGrid({ selectedPattern, onSelectionChange }) {
   const handleChange = (event, value) => {
-    const newValue = value;
-    onSelectionChange(newValue); // Call the callback with the selected value
-    console.log(event)
+    onSelectionChange(value); // Call the callback with the selected value
   };
 
   return (
