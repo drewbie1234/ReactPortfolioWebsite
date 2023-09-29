@@ -23,9 +23,6 @@ function BotTech() {
   const [selectedPattern, setSelectedPattern] = useState("randomDots");
   const [selectedSize, setSelectedSize] = useState('small')
 
-
-
-
   // Styling for the grid and its container
   const gridStyles = {
     display: "grid",
@@ -87,16 +84,16 @@ function BotTech() {
 
     switch (selectedSize) {
       case 'small':
-        setNumRows(10)
-        setNumCols(10)
+        setNumRows(11)
+        setNumCols(11)
         break;
       case 'medium':
-        setNumRows(20)
-        setNumCols(20)
+        setNumRows(25)
+        setNumCols(25)
         break;
       case 'large':
-        setNumRows(30)
-        setNumCols(30)
+        setNumRows(31)
+        setNumCols(31)
         break;
       default:
         break;
@@ -121,7 +118,7 @@ function BotTech() {
 
     // Call passes grid object array into setter for grid state variable
     setGrid(mazeCells);
-  }, [selectedPattern, selectedSize, numRows, numCols]);
+  }, [selectedPattern, selectedSize, numRows, numCols, cellSize]);
 
   // Function to update a cell in the grid
   const updateCellInGrid = (cellIndex, newCell) => {
@@ -137,23 +134,17 @@ function BotTech() {
     const cellIndex1 = grid.findIndex(
       (cell) => cell.key === `${position.x}-${position.y}`
     );
-
     const cellIndex2 = grid.findIndex(
       (cell) => cell.key === `${botPosition.x}-${botPosition.y}`
     );
-
     if (grid[cellIndex1] !== { x: `${position.x}`, y: `${position.y}` }) {
       const updatedCell1 = MakeCell("player", position.x, position.y, cellSize);
       updateCellInGrid(cellIndex1, updatedCell1);
     }
-
     if (grid[cellIndex2] !== { x: `${botPosition.x}`, y: `${botPosition.y}` }) {
       const updatedCell2 = MakeCell("bot", botPosition.x, botPosition.y, cellSize);
       updateCellInGrid(cellIndex2, updatedCell2);
     }
-
-    console.log("updategrid");
-    
   }, [position, botPosition]);
 
   // Calculate new position based on offsets and grid boundaries

@@ -73,6 +73,7 @@ function MakeCell(type, row, col, cellSize) {
           style: {
             width: `${cellSize}vmin`,
             height: `${cellSize}vmin`,
+            background: "linear-gradient(45deg, #111, #002)",
           },
         };
     }
